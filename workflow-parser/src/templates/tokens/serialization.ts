@@ -1,6 +1,6 @@
 import {ScalarToken} from "./scalar-token";
 import {TemplateToken} from "./template-token";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export type MapItem = {
   Key: ScalarToken;

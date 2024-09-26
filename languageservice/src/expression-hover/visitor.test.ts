@@ -8,7 +8,7 @@ import {getWorkflowContext} from "../context/workflow-context";
 import {validatorFunctions} from "../expression-validation/functions";
 import {nullTrace} from "../nulltrace";
 import {getPositionFromCursor} from "../test-utils/cursor-position";
-import {HoverVisitor} from "./visitor";
+import {HoverVisitor} from "./visitor.js";
 
 const contextProviderConfig: ContextProviderConfig = {
   getContext: (context: string) => {

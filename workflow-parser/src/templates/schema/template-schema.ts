@@ -49,7 +49,7 @@ import {readTemplate} from "../template-reader";
 import {MappingToken, SequenceToken, StringToken} from "../tokens";
 import {NoOperationTraceWriter} from "../trace-writer";
 import {BooleanDefinition} from "./boolean-definition";
-import {Definition} from "./definition";
+import {Definition} from "./definition.js";
 import {DefinitionType} from "./definition-type";
 import {MappingDefinition} from "./mapping-definition";
 import {NullDefinition} from "./null-definition";

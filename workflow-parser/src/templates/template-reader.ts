@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
 import {ObjectReader} from "./object-reader";
-import {TemplateSchema} from "./schema";
+import {TemplateSchema} from "./schema.js";
 import {DefinitionInfo} from "./schema/definition-info";
 import {DefinitionType} from "./schema/definition-type";
 import {MappingDefinition} from "./schema/mapping-definition";
@@ -20,7 +20,7 @@ import {
   ScalarToken,
   StringToken,
   TemplateToken
-} from "./tokens";
+} from "./tokens.js";
 import {TokenRange} from "./tokens/token-range";
 import {isString} from "./tokens/type-guards";
 import {TokenType} from "./tokens/types";

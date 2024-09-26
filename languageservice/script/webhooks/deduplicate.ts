@@ -1,4 +1,4 @@
-import Webhook from "./webhook";
+import Webhook from "./webhook.js";
 
 // Store any repeated body parameters in an array
 // and replace them in the webhook with an index in the array

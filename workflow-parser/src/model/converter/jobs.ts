@@ -4,7 +4,7 @@ import {TemplateToken} from "../../templates/tokens/template-token";
 import {isMapping} from "../../templates/tokens/type-guards";
 import {WorkflowJob} from "../workflow-template";
 import {handleTemplateTokenErrors} from "./handle-errors";
-import {convertJob} from "./job";
+import {convertJob} from "./job.js";
 
 type nodeInfo = {
   name: string;

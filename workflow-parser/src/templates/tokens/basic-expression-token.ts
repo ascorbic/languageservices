@@ -3,10 +3,10 @@ import {DefinitionInfo} from "../schema/definition-info";
 import {CLOSE_EXPRESSION, OPEN_EXPRESSION} from "../template-constants";
 import {ExpressionToken} from "./expression-token";
 import {ScalarToken} from "./scalar-token";
-import {SerializedExpressionToken} from "./serialization";
+import {SerializedExpressionToken} from "./serialization.js";
 import {TemplateToken} from "./template-token";
 import {TokenRange} from "./token-range";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export class BasicExpressionToken extends ExpressionToken {
   private readonly expr: string;

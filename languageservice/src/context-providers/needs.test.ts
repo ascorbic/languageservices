@@ -2,7 +2,7 @@ import {DescriptionDictionary} from "@actions/expressions";
 import {StringData} from "@actions/expressions/data/string";
 import {WorkflowContext} from "../context/workflow-context";
 import {testGetWorkflowContext} from "../test-utils/test-workflow-context";
-import {getNeedsContext} from "./needs";
+import {getNeedsContext} from "./needs.js";
 
 describe("needs context", () => {
   describe("invalid workflow context", () => {

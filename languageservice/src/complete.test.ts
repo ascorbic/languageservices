@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {MarkupContent, TextEdit} from "vscode-languageserver-types";
-import {complete} from "./complete";
-import {registerLogger} from "./log";
+import {complete} from "./complete.js";
+import {registerLogger} from "./log.js";
 import {getPositionFromCursor} from "./test-utils/cursor-position";
 import {TestLogger} from "./test-utils/logger";
 import {clearCache} from "./utils/workflow-cache";

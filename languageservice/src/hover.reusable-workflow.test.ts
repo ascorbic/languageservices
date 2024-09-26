@@ -1,4 +1,4 @@
-import {hover} from "./hover";
+import {hover} from "./hover.js";
 import {testHoverConfig} from "./hover.test";
 import {getPositionFromCursor} from "./test-utils/cursor-position";
 import {clearCache} from "./utils/workflow-cache";

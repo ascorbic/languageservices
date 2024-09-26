@@ -1,6 +1,6 @@
 import {Diagnostic, DiagnosticSeverity} from "vscode-languageserver-types";
 import {createDocument} from "./test-utils/document";
-import {validate} from "./validate";
+import {validate} from "./validate.js";
 import {defaultValueProviders} from "./value-providers/default";
 import {clearCache} from "./utils/workflow-cache";
 import {ValueProviderConfig, ValueProviderKind} from "./value-providers/config";

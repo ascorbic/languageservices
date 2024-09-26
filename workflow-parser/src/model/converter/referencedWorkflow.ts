@@ -5,7 +5,7 @@ import {ReusableWorkflowJob} from "../workflow-template";
 import {handleTemplateTokenErrors} from "./handle-errors";
 import {convertWorkflowJobInputs} from "./job/inputs";
 import {convertWorkflowJobSecrets} from "./job/secrets";
-import {convertJobs} from "./jobs";
+import {convertJobs} from "./jobs.js";
 
 export function convertReferencedWorkflow(
   context: TemplateContext,

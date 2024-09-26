@@ -13,7 +13,7 @@ import {
 } from "../template-constants";
 import {MappingToken} from "../tokens";
 import {BooleanDefinition} from "./boolean-definition";
-import {Definition} from "./definition";
+import {Definition} from "./definition.js";
 import {DefinitionType} from "./definition-type";
 import {MappingDefinition} from "./mapping-definition";
 import {NullDefinition} from "./null-definition";

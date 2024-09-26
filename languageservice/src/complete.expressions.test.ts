@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types";
-import {complete, getExpressionInput} from "./complete";
+import {complete, getExpressionInput} from "./complete.js";
 import {ContextProviderConfig} from "./context-providers/config";
-import {registerLogger} from "./log";
+import {registerLogger} from "./log.js";
 import {getPositionFromCursor} from "./test-utils/cursor-position";
 import {TestLogger} from "./test-utils/logger";
 import {testFileProvider} from "./test-utils/test-file-provider";

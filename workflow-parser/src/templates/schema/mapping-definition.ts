@@ -1,7 +1,7 @@
 import {TemplateSchema} from "./template-schema";
 import {DEFINITION, MAPPING, PROPERTIES, LOOSE_KEY_TYPE, LOOSE_VALUE_TYPE} from "../template-constants";
 import {MappingToken} from "../tokens";
-import {Definition} from "./definition";
+import {Definition} from "./definition.js";
 import {DefinitionType} from "./definition-type";
 import {PropertyDefinition} from "./property-definition";
 

@@ -13,7 +13,7 @@ import {
   TypesFilterConfig,
   WorkflowFilterConfig
 } from "../workflow-template";
-import {isValidCron} from "./cron";
+import {isValidCron} from "./cron.js";
 import {convertStringList} from "./string-list";
 import {convertEventWorkflowCall} from "./workflow-call";
 import {convertEventWorkflowDispatchInputs} from "./workflow-dispatch";

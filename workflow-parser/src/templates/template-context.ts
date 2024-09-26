@@ -2,7 +2,7 @@ import {FunctionInfo} from "@actions/expressions/funcs/info";
 
 import {TemplateSchema} from "./schema/template-schema";
 import {TemplateValidationError} from "./template-validation-error";
-import {TemplateToken} from "./tokens";
+import {TemplateToken} from "./tokens.js";
 import {TokenRange} from "./tokens/token-range";
 import {TraceWriter} from "./trace-writer";
 /**

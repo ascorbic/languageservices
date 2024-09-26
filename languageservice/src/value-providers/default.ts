@@ -1,5 +1,5 @@
-import {ValueProviderConfig, ValueProviderKind} from "./config";
-import {needs} from "./needs";
+import {ValueProviderConfig, ValueProviderKind} from "./config.js";
+import {needs} from "./needs.js";
 import {reusableJobInputs} from "./reusable-job-inputs";
 import {reusableJobSecrets} from "./reusable-job-secrets";
 import {stringsToValues} from "./strings-to-values";

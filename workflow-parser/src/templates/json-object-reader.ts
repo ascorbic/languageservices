@@ -1,6 +1,14 @@
 import {ObjectReader} from "./object-reader";
 import {EventType, ParseEvent} from "./parse-event";
-import {LiteralToken, SequenceToken, MappingToken, NullToken, BooleanToken, NumberToken, StringToken} from "./tokens";
+import {
+  LiteralToken,
+  SequenceToken,
+  MappingToken,
+  NullToken,
+  BooleanToken,
+  NumberToken,
+  StringToken
+} from "./tokens.js";
 
 export class JSONObjectReader implements ObjectReader {
   private readonly _fileId: number | undefined;

@@ -2,7 +2,7 @@ import {TemplateContext, TemplateValidationErrors} from "../templates/template-c
 import * as templateReader from "../templates/template-reader";
 import {TemplateToken} from "../templates/tokens/template-token";
 import {TraceWriter} from "../templates/trace-writer";
-import {File} from "./file";
+import {File} from "./file.js";
 import {WORKFLOW_ROOT} from "./workflow-constants";
 import {getWorkflowSchema} from "./workflow-schema";
 import {YamlObjectReader} from "./yaml-object-reader";

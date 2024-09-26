@@ -1,7 +1,7 @@
 import {LiteralToken, TemplateToken} from ".";
 import {DefinitionInfo} from "../schema/definition-info";
 import {TokenRange} from "./token-range";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export class BooleanToken extends LiteralToken {
   private readonly bool: boolean;

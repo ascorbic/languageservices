@@ -6,7 +6,7 @@ import {Octokit} from "@octokit/rest";
 import {getSecrets} from "./context-providers/secrets";
 import {getStepsContext} from "./context-providers/steps";
 import {getVariables} from "./context-providers/variables";
-import {RepositoryContext} from "./initializationOptions";
+import {RepositoryContext} from "./initializationOptions.js";
 import {TTLCache} from "./utils/cache";
 
 export function contextProviders(

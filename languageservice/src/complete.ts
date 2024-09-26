@@ -14,7 +14,7 @@ import {ContextProviderConfig} from "./context-providers/config";
 import {getContext, Mode} from "./context-providers/default";
 import {getWorkflowContext, WorkflowContext} from "./context/workflow-context";
 import {validatorFunctions} from "./expression-validation/functions";
-import {error} from "./log";
+import {error} from "./log.js";
 import {isPotentiallyExpression} from "./utils/expression-detection";
 import {findToken} from "./utils/find-token";
 import {guessIndentation} from "./utils/indentation-guesser";

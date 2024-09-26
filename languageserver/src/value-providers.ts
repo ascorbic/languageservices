@@ -2,7 +2,7 @@ import {ValueProviderConfig} from "@actions/languageservice";
 import {WorkflowContext} from "@actions/languageservice/context/workflow-context";
 import {ValueProviderKind} from "@actions/languageservice/value-providers/config";
 import {Octokit} from "@octokit/rest";
-import {RepositoryContext} from "./initializationOptions";
+import {RepositoryContext} from "./initializationOptions.js";
 import {TTLCache} from "./utils/cache";
 import {getActionInputValues} from "./value-providers/action-inputs";
 import {getEnvironments} from "./value-providers/job-environment";

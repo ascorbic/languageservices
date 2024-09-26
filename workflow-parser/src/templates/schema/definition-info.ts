@@ -1,5 +1,5 @@
 import {TemplateSchema} from ".";
-import {Definition} from "./definition";
+import {Definition} from "./definition.js";
 import {DefinitionType} from "./definition-type";
 import {ScalarDefinition} from "./scalar-definition";
 

@@ -7,7 +7,7 @@ import {ScalarToken} from "./scalar-token";
 import {SequenceToken} from "./sequence-token";
 import {StringToken} from "./string-token";
 import {TemplateToken} from "./template-token";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export function isLiteral(t: TemplateToken): t is LiteralToken {
   return t.isLiteral;

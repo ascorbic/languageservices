@@ -18,14 +18,14 @@ import {
   TextDocumentSyncKind
 } from "vscode-languageserver";
 import {TextDocument} from "vscode-languageserver-textdocument";
-import {getClient} from "./client";
-import {Commands} from "./commands";
+import {getClient} from "./client.js";
+import {Commands} from "./commands.js";
 import {contextProviders} from "./context-providers";
 import {descriptionProvider} from "./description-provider";
 import {getFileProvider} from "./file-provider";
-import {InitializationOptions, RepositoryContext} from "./initializationOptions";
+import {InitializationOptions, RepositoryContext} from "./initializationOptions.js";
 import {onCompletion} from "./on-completion";
-import {ReadFileRequest, Requests} from "./request";
+import {ReadFileRequest, Requests} from "./request.js";
 import {getActionsMetadataProvider} from "./utils/action-metadata";
 import {TTLCache} from "./utils/cache";
 import {timeOperation} from "./utils/timer";

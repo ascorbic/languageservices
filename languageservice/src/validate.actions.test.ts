@@ -1,9 +1,9 @@
 import {DiagnosticSeverity} from "vscode-languageserver-types";
-import {ActionMetadata, ActionReference} from "./action";
-import {registerLogger} from "./log";
+import {ActionMetadata, ActionReference} from "./action.js";
+import {registerLogger} from "./log.js";
 import {createDocument} from "./test-utils/document";
 import {TestLogger} from "./test-utils/logger";
-import {validate, ValidationConfig} from "./validate";
+import {validate, ValidationConfig} from "./validate.js";
 import {ValueProviderKind} from "./value-providers/config";
 import {clearCache} from "./utils/workflow-cache";
 

@@ -1,7 +1,7 @@
 import {TemplateToken} from ".";
 import {MappingToken} from "./mapping-token";
 import {SequenceToken} from "./sequence-token";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export class TraversalState {
   private readonly _token: TemplateToken;

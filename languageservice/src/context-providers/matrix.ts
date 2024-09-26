@@ -4,7 +4,7 @@ import {KeyValuePair} from "@actions/workflow-parser/templates/tokens/key-value-
 import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token";
 import {SequenceToken} from "@actions/workflow-parser/templates/tokens/sequence-token";
 import {WorkflowContext} from "../context/workflow-context";
-import {ContextValue, Mode} from "./default";
+import {ContextValue, Mode} from "./default.js";
 
 export function getMatrixContext(workflowContext: WorkflowContext, mode: Mode): ContextValue {
   // https://docs.github.com/en/actions/learn-github-actions/contexts#matrix-context

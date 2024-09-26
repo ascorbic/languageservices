@@ -4,8 +4,8 @@ import {CompletionItem, Connection, Position} from "vscode-languageserver";
 import {TextDocument} from "vscode-languageserver-textdocument";
 import {contextProviders} from "./context-providers";
 import {getFileProvider} from "./file-provider";
-import {RepositoryContext} from "./initializationOptions";
-import {Requests} from "./request";
+import {RepositoryContext} from "./initializationOptions.js";
+import {Requests} from "./request.js";
 import {TTLCache} from "./utils/cache";
 import {valueProviders} from "./value-providers";
 

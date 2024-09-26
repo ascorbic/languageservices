@@ -2,10 +2,10 @@ import {data, DescriptionDictionary, isDescriptionDictionary} from "@actions/exp
 import {ExpressionData} from "@actions/expressions/data/expressiondata";
 import {TypesFilterConfig} from "@actions/workflow-parser/model/workflow-template";
 import {WorkflowContext} from "../context/workflow-context";
-import {Mode} from "./default";
-import {getDescription} from "./descriptions";
+import {Mode} from "./default.js";
+import {getDescription} from "./descriptions.js";
 import {getEventPayload, getSupportedEventTypes} from "./events/eventPayloads";
-import {getInputsContext} from "./inputs";
+import {getInputsContext} from "./inputs.js";
 
 export function getGithubContext(workflowContext: WorkflowContext, mode: Mode): DescriptionDictionary {
   // https://docs.github.com/en/actions/learn-github-actions/contexts#github-context

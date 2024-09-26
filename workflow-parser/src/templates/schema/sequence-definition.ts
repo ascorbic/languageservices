@@ -1,6 +1,6 @@
 import {DEFINITION, SEQUENCE, ITEM_TYPE} from "../template-constants";
 import {MappingToken} from "../tokens";
-import {Definition} from "./definition";
+import {Definition} from "./definition.js";
 import {DefinitionType} from "./definition-type";
 import {TemplateSchema} from "./template-schema";
 

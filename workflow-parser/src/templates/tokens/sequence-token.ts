@@ -1,8 +1,8 @@
 import {TemplateToken} from ".";
 import {DefinitionInfo} from "../schema/definition-info";
-import {SerializedSequenceToken} from "./serialization";
+import {SerializedSequenceToken} from "./serialization.js";
 import {TokenRange} from "./token-range";
-import {TokenType} from "./types";
+import {TokenType} from "./types.js";
 
 export class SequenceToken extends TemplateToken {
   private readonly seq: TemplateToken[] = [];

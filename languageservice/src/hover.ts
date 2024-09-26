@@ -21,7 +21,7 @@ import {
 } from "./description-providers/reusable-job-inputs";
 import {ExpressionPos, mapToExpressionPos} from "./expression-hover/expression-pos";
 import {HoverVisitor} from "./expression-hover/visitor";
-import {info} from "./log";
+import {info} from "./log.js";
 import {isPotentiallyExpression} from "./utils/expression-detection";
 import {findToken, TokenResult} from "./utils/find-token";
 import {mapRange} from "./utils/range";

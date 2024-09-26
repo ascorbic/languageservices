@@ -1,6 +1,6 @@
 import {TokenRange} from "@actions/workflow-parser/templates/tokens/token-range";
 import {Position} from "vscode-languageserver-textdocument";
-import {mapRange} from "./range";
+import {mapRange} from "./range.js";
 
 export function getRelCharOffset(tokenRange: TokenRange, currentInput: string, pos: Position): number {
   const range = mapRange(tokenRange);

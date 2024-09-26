@@ -2,10 +2,10 @@ import {BooleanToken, MappingToken, NullToken, NumberToken, ScalarToken, Sequenc
 import {Definition} from "../schema/definition";
 import {DefinitionInfo} from "../schema/definition-info";
 import {PropertyDefinition} from "../schema/property-definition";
-import {SerializedToken} from "./serialization";
+import {SerializedToken} from "./serialization.js";
 import {TokenRange} from "./token-range";
 import {TraversalState} from "./traversal-state";
-import {TokenType, tokenTypeName} from "./types";
+import {TokenType, tokenTypeName} from "./types.js";
 
 export class TemplateTokenError extends Error {
   constructor(message: string, public readonly token?: TemplateToken) {

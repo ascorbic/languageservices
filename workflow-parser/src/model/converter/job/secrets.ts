@@ -1,7 +1,7 @@
 import {TemplateContext} from "../../../templates/template-context";
 import {NullToken} from "../../../templates/tokens";
 import {ReusableWorkflowJob} from "../../workflow-template";
-import {createTokenMap} from "./inputs";
+import {createTokenMap} from "./inputs.js";
 
 export function convertWorkflowJobSecrets(context: TemplateContext, job: ReusableWorkflowJob) {
   // No validation if job passes all secrets
