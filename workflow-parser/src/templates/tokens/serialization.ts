@@ -1,5 +1,5 @@
-import {ScalarToken} from "./scalar-token";
-import {TemplateToken} from "./template-token";
+import {ScalarToken} from "./scalar-token.js";
+import {TemplateToken} from "./template-token.js";
 import {TokenType} from "./types.js";
 
 export type MapItem = {

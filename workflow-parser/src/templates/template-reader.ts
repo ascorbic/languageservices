@@ -1,16 +1,16 @@
 // template-reader *just* does schema validation
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
-import {ObjectReader} from "./object-reader";
-import {TemplateSchema} from "./schema.js";
-import {DefinitionInfo} from "./schema/definition-info";
-import {DefinitionType} from "./schema/definition-type";
-import {MappingDefinition} from "./schema/mapping-definition";
-import {ScalarDefinition} from "./schema/scalar-definition";
-import {SequenceDefinition} from "./schema/sequence-definition";
-import {StringDefinition} from "./schema/string-definition";
-import {ANY, CLOSE_EXPRESSION, INSERT_DIRECTIVE, OPEN_EXPRESSION} from "./template-constants";
-import {TemplateContext} from "./template-context";
+import {ObjectReader} from "./object-reader.js";
+import {TemplateSchema} from "./schema/index.js";
+import {DefinitionInfo} from "./schema/definition-info.js";
+import {DefinitionType} from "./schema/definition-type.js";
+import {MappingDefinition} from "./schema/mapping-definition.js";
+import {ScalarDefinition} from "./schema/scalar-definition.js";
+import {SequenceDefinition} from "./schema/sequence-definition.js";
+import {StringDefinition} from "./schema/string-definition.js";
+import {ANY, CLOSE_EXPRESSION, INSERT_DIRECTIVE, OPEN_EXPRESSION} from "./template-constants.js";
+import {TemplateContext} from "./template-context.js";
 import {
   BasicExpressionToken,
   ExpressionToken,
@@ -20,10 +20,10 @@ import {
   ScalarToken,
   StringToken,
   TemplateToken
-} from "./tokens.js";
-import {TokenRange} from "./tokens/token-range";
-import {isString} from "./tokens/type-guards";
-import {TokenType} from "./tokens/types";
+} from "./tokens/index.js";
+import {TokenRange} from "./tokens/token-range.js";
+import {isString} from "./tokens/type-guards.js";
+import {TokenType} from "./tokens/types.js";
 
 const WHITESPACE_PATTERN = /\s/;
 
@@ -631,7 +631,7 @@ class TemplateReader {
       return undefined;
     }
 
-    return parseExpressionResult.expression!;
+    return parseExpressionResult.expression;
   }
 
   private parseExpression(

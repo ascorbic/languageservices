@@ -1,5 +1,5 @@
 import {DescriptionDictionary, isDescriptionDictionary} from "@actions/expressions/.";
-import {testGetWorkflowContext} from "../test-utils/test-workflow-context";
+import {testGetWorkflowContext} from "../test-utils/test-workflow-context.js";
 import {Mode} from "./default.js";
 import {getGithubContext} from "./github.js";
 
@@ -39,7 +39,7 @@ jobs:
     ]);
   });
 
-  it("single event - multiple types", async () => {
+  it("single event - multiple types.js", async () => {
     const workflowContext = await testGetWorkflowContext(`
 on:
   pull_request:
@@ -74,7 +74,7 @@ jobs:
     ]);
   });
 
-  it("single event - no default types", async () => {
+  it("single event - no default types.js", async () => {
     const workflowContext = await testGetWorkflowContext(`
 on:
   issues:
@@ -127,7 +127,7 @@ jobs:
     ]);
   });
 
-  it("multiple events - multiple types", async () => {
+  it("multiple events - multiple types.js", async () => {
     const workflowContext = await testGetWorkflowContext(`
 on:
   push:

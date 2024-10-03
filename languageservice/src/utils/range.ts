@@ -1,5 +1,5 @@
-import {Position as TokenPosition, TokenRange} from "@actions/workflow-parser/templates/tokens/token-range";
-import {Position, Range} from "vscode-languageserver-types";
+import {Position as TokenPosition, TokenRange} from "@actions/workflow-parser/templates/tokens/token-range.js";
+import {Position, Range} from "vscode-languageserver-types.js";
 
 export function mapRange(range: TokenRange | undefined): Range {
   if (!range) {

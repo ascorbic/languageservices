@@ -1,7 +1,7 @@
 import {BooleanData, ExpressionData, NumberData, StringData} from "./data/index.js";
 import {coerceTypes, toUpperSpecial} from "./result.js";
 
-describe("coerceTypes", () => {
+describe("coercetypes.js", () => {
   const tests: {
     name: string;
     data: {

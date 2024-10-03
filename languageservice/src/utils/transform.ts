@@ -1,8 +1,8 @@
 import {isString} from "@actions/workflow-parser";
-import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
+import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
 import {Position, TextDocument} from "vscode-languageserver-textdocument";
-import {Range} from "vscode-languageserver-types";
+import {Range} from "vscode-languageserver-types.js";
 
 const PLACEHOLDER_KEY = "key";
 

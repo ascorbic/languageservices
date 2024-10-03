@@ -1,9 +1,9 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {isBasicExpression, isMapping, isSequence, isString} from "@actions/workflow-parser";
 import {KeyValuePair} from "@actions/workflow-parser/templates/tokens/key-value-pair";
-import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token";
-import {SequenceToken} from "@actions/workflow-parser/templates/tokens/sequence-token";
-import {WorkflowContext} from "../context/workflow-context";
+import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token.js";
+import {SequenceToken} from "@actions/workflow-parser/templates/tokens/sequence-token.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {ContextValue, Mode} from "./default.js";
 
 export function getMatrixContext(workflowContext: WorkflowContext, mode: Mode): ContextValue {

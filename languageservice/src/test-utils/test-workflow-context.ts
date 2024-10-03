@@ -1,7 +1,7 @@
 import {convertWorkflowTemplate, parseWorkflow, WorkflowTemplate} from "@actions/workflow-parser";
-import {getWorkflowContext, WorkflowContext} from "../context/workflow-context";
+import {getWorkflowContext, WorkflowContext} from "../context/workflow-context.js";
 import {nullTrace} from "../nulltrace";
-import {findToken} from "../utils/find-token";
+import {findToken} from "../utils/find-token.js";
 import {getPositionFromCursor} from "./cursor-position";
 import {testFileProvider} from "./test-file-provider";
 

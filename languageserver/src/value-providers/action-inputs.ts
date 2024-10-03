@@ -1,7 +1,7 @@
 import {ActionInputs, ActionReference, parseActionReference} from "@actions/languageservice/action";
-import {WorkflowContext} from "@actions/languageservice/context/workflow-context";
+import {WorkflowContext} from "@actions/languageservice/context/workflow-context.js";
 import {Value} from "@actions/languageservice/value-providers/config";
-import {isActionStep} from "@actions/workflow-parser/model/type-guards";
+import {isActionStep} from "@actions/workflow-parser/model/type-guards.js";
 import {Octokit} from "@octokit/rest";
 import {fetchActionMetadata} from "../utils/action-metadata";
 import {TTLCache} from "../utils/cache";

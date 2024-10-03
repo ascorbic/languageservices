@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as YAML from "yaml";
 import {convertWorkflowTemplate} from "./model/convert";
-import {NoOperationTraceWriter} from "./templates/trace-writer";
+import {NoOperationTraceWriter} from "./templates/trace-writer.js";
 import {File} from "./workflows/file";
 import {FileProvider} from "./workflows/file-provider";
 import {fileIdentifier, FileReference} from "./workflows/file-reference";

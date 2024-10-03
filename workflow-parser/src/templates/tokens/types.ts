@@ -12,21 +12,21 @@ export enum TokenType {
 export function tokenTypeName(type: TokenType): string {
   switch (type) {
     case TokenType.String:
-      return "StringToken";
+      return "Stringtoken.js";
     case TokenType.Sequence:
-      return "SequenceToken";
+      return "Sequencetoken.js";
     case TokenType.Mapping:
-      return "MappingToken";
+      return "Mappingtoken.js";
     case TokenType.BasicExpression:
-      return "BasicExpressionToken";
+      return "BasicExpressiontoken.js";
     case TokenType.InsertExpression:
-      return "InsertExpressionToken";
+      return "InsertExpressiontoken.js";
     case TokenType.Boolean:
-      return "BooleanToken";
+      return "Booleantoken.js";
     case TokenType.Number:
-      return "NumberToken";
+      return "Numbertoken.js";
     case TokenType.Null:
-      return "NullToken";
+      return "Nulltoken.js";
     default: {
       // Use never to ensure exhaustiveness
       const exhaustiveCheck: never = type;

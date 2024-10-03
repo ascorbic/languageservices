@@ -1,9 +1,9 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {isMapping, isScalar, isString} from "@actions/workflow-parser";
-import {isJob} from "@actions/workflow-parser/model/type-guards";
-import {WorkflowJob} from "@actions/workflow-parser/model/workflow-template";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {WorkflowContext} from "../context/workflow-context";
+import {isJob} from "@actions/workflow-parser/model/type-guards.js";
+import {WorkflowJob} from "@actions/workflow-parser/model/workflow-template.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 
 export function getNeedsContext(workflowContext: WorkflowContext): DescriptionDictionary {
   const d = new DescriptionDictionary();

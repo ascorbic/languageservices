@@ -42,7 +42,7 @@ const testContext = new Dictionary(
   {
     key: "secrets",
     value: new Dictionary({
-      key: "AWS_TOKEN",
+      key: "AWS_token.js",
       value: new BooleanData(true)
     })
   },
@@ -154,7 +154,7 @@ describe("auto-complete", () => {
     });
 
     it("provides suggestions for secrets", () => {
-      const expected = completionItems("AWS_TOKEN");
+      const expected = completionItems("AWS_token.js");
 
       expect(testComplete("secrets.A")).toEqual(expected);
       expect(testComplete("1 == secrets.F")).toEqual(expected);
@@ -171,7 +171,7 @@ describe("auto-complete", () => {
 
     it("provides suggestions for contexts in function call", () => {
       expect(testComplete("toJSON(env.|)")).toEqual(completionItems("BAR_TEST", "FOO"));
-      expect(testComplete("toJSON(secrets.")).toEqual(completionItems("AWS_TOKEN"));
+      expect(testComplete("toJSON(secrets.")).toEqual(completionItems("AWS_token.js"));
     });
 
     describe("with descriptions", () => {

@@ -1,13 +1,19 @@
-import {TemplateContext} from "../../templates/template-context";
-import {BasicExpressionToken, MappingToken, ScalarToken, StringToken, TemplateToken} from "../../templates/tokens";
-import {isSequence, isString} from "../../templates/tokens/type-guards";
-import {Step, WorkflowJob} from "../workflow-template";
+import {TemplateContext} from "../../templates/template-context.js";
+import {
+  BasicExpressionToken,
+  MappingToken,
+  ScalarToken,
+  StringToken,
+  TemplateToken
+} from "../../templates/tokens/index.js";
+import {isSequence, isString} from "../../templates/tokens/type-guards.js";
+import {Step, WorkflowJob} from "../workflow-template.js";
 import {convertConcurrency} from "./concurrency.js";
 import {convertToJobContainer, convertToJobServices} from "./container.js";
-import {handleTemplateTokenErrors} from "./handle-errors";
-import {IdBuilder} from "./id-builder";
-import {convertToActionsEnvironmentRef} from "./job/environment";
-import {convertRunsOn} from "./job/runs-on";
+import {handleTemplateTokenErrors} from "./handle-errors.js";
+import {IdBuilder} from "./id-builder.js";
+import {convertToActionsEnvironmentRef} from "./job/environment.js";
+import {convertRunsOn} from "./job/runs-on.js";
 import {convertSteps} from "./steps.js";
 
 export function convertJob(context: TemplateContext, jobKey: StringToken, token: MappingToken): WorkflowJob {

@@ -1,12 +1,12 @@
-import {TemplateContext, TemplateValidationErrors} from "../templates/template-context";
-import {TemplateToken} from "../templates/tokens";
-import {TokenType} from "../templates/tokens/types";
+import {TemplateContext, TemplateValidationErrors} from "../templates/template-context.js";
+import {TemplateToken} from "../templates/tokens/index.js";
+import {TokenType} from "../templates/tokens/types.js";
 import {nullTrace} from "../test-utils/null-trace";
 import {parseWorkflow} from "./workflow-parser";
-import {getWorkflowSchema} from "./workflow-schema";
-import {YamlObjectReader} from "./yaml-object-reader";
+import {getWorkflowSchema} from "./workflow-schema/index.js";
+import {YamlObjectReader} from "./yaml-object-reader.js";
 
-describe("getLiteralToken", () => {
+describe("getLiteraltoken.js", () => {
   it("non-zero number", () => {
     const result = parseAsWorkflow("1");
 

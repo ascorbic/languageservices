@@ -1,6 +1,6 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {format} from "@actions/expressions/funcs/format";
-import {Hover} from "vscode-languageserver-types";
+import {Hover} from "vscode-languageserver-types.js";
 import {ContextProviderConfig} from "./context-providers/config";
 import {hover} from "./hover.js";
 import {registerLogger} from "./log.js";

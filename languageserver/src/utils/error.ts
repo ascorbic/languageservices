@@ -1,4 +1,4 @@
-import {RequestError} from "@octokit/types";
+import {RequestError} from "@octokit/types.js";
 
 export function errorMessage(error: unknown): string {
   if (error instanceof Error) {

@@ -1,11 +1,11 @@
-import {TemplateContext, TemplateValidationErrors} from "../templates/template-context";
-import * as templateReader from "../templates/template-reader";
-import {TemplateToken} from "../templates/tokens/template-token";
-import {TraceWriter} from "../templates/trace-writer";
+import {TemplateContext, TemplateValidationErrors} from "../templates/template-context.js";
+import * as templateReader from "../templates/template-reader.js";
+import {TemplateToken} from "../templates/tokens/template-token.js";
+import {TraceWriter} from "../templates/trace-writer.js";
 import {File} from "./file.js";
-import {WORKFLOW_ROOT} from "./workflow-constants";
-import {getWorkflowSchema} from "./workflow-schema";
-import {YamlObjectReader} from "./yaml-object-reader";
+import {WORKFLOW_ROOT} from "./workflow-constants.js";
+import {getWorkflowSchema} from "./workflow-schema.js";
+import {YamlObjectReader} from "./yaml-object-reader.js";
 export interface ParseWorkflowResult {
   context: TemplateContext;
   value: TemplateToken | undefined;

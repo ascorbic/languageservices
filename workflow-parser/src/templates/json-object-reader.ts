@@ -1,5 +1,5 @@
-import {ObjectReader} from "./object-reader";
-import {EventType, ParseEvent} from "./parse-event";
+import {ObjectReader} from "./object-reader.js";
+import {EventType, ParseEvent} from "./parse-event.js";
 import {
   LiteralToken,
   SequenceToken,
@@ -8,7 +8,7 @@ import {
   BooleanToken,
   NumberToken,
   StringToken
-} from "./tokens.js";
+} from "./tokens/index.js";
 
 export class JSONObjectReader implements ObjectReader {
   private readonly _fileId: number | undefined;
@@ -25,7 +25,7 @@ export class JSONObjectReader implements ObjectReader {
   public allowLiteral(): LiteralToken | undefined {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.Literal) {
+      if (parseEvent && parseEvent.type === EventType.Literal) {
         this._current = this._generator.next();
         return parseEvent.token as LiteralToken;
       }
@@ -37,7 +37,7 @@ export class JSONObjectReader implements ObjectReader {
   public allowSequenceStart(): SequenceToken | undefined {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.SequenceStart) {
+      if (parseEvent && parseEvent.type === EventType.SequenceStart) {
         this._current = this._generator.next();
         return parseEvent.token as SequenceToken;
       }
@@ -49,7 +49,7 @@ export class JSONObjectReader implements ObjectReader {
   public allowSequenceEnd(): boolean {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.SequenceEnd) {
+      if (parseEvent && parseEvent.type === EventType.SequenceEnd) {
         this._current = this._generator.next();
         return true;
       }
@@ -61,7 +61,7 @@ export class JSONObjectReader implements ObjectReader {
   public allowMappingStart(): MappingToken | undefined {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.MappingStart) {
+      if (parseEvent && parseEvent.type === EventType.MappingStart) {
         this._current = this._generator.next();
         return parseEvent.token as MappingToken;
       }
@@ -73,7 +73,7 @@ export class JSONObjectReader implements ObjectReader {
   public allowMappingEnd(): boolean {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.MappingEnd) {
+      if (parseEvent && parseEvent.type === EventType.MappingEnd) {
         this._current = this._generator.next();
         return true;
       }
@@ -85,7 +85,7 @@ export class JSONObjectReader implements ObjectReader {
   public validateEnd(): void {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.DocumentEnd) {
+      if (parseEvent && parseEvent.type === EventType.DocumentEnd) {
         this._current = this._generator.next();
         return;
       }
@@ -97,7 +97,7 @@ export class JSONObjectReader implements ObjectReader {
   public validateStart(): void {
     if (!this._current.done) {
       const parseEvent = this._current.value;
-      if (parseEvent.type === EventType.DocumentStart) {
+      if (parseEvent && parseEvent.type === EventType.DocumentStart) {
         this._current = this._generator.next();
         return;
       }

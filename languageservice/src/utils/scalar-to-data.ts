@@ -1,7 +1,7 @@
 import {data} from "@actions/expressions";
 import {isBoolean, isNumber, isString} from "@actions/workflow-parser";
-import {ScalarToken} from "@actions/workflow-parser/templates/tokens/scalar-token";
-import {TokenType} from "@actions/workflow-parser/templates/tokens/types";
+import {ScalarToken} from "@actions/workflow-parser/templates/tokens/scalar-token.js";
+import {TokenType} from "@actions/workflow-parser/templates/tokens/types.js";
 
 export function scalarToData(scalar: ScalarToken): data.ExpressionData {
   if (isNumber(scalar)) {

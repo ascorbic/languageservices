@@ -1,4 +1,4 @@
-import {LiteralToken, MappingToken} from "../tokens";
+import {LiteralToken, MappingToken} from "../tokens/index.js";
 import {Definition} from "./definition.js";
 
 export abstract class ScalarDefinition extends Definition {

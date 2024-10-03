@@ -1,4 +1,4 @@
-import {Diagnostic, DiagnosticSeverity} from "vscode-languageserver-types";
+import {Diagnostic, DiagnosticSeverity} from "vscode-languageserver-types.js";
 import {createDocument} from "./test-utils/document";
 import {validate} from "./validate.js";
 import {defaultValueProviders} from "./value-providers/default";

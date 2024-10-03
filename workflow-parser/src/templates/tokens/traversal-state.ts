@@ -1,6 +1,6 @@
-import {TemplateToken} from ".";
-import {MappingToken} from "./mapping-token";
-import {SequenceToken} from "./sequence-token";
+import {TemplateToken} from "./index.js";
+import {MappingToken} from "./mapping-token.js";
+import {SequenceToken} from "./sequence-token.js";
 import {TokenType} from "./types.js";
 
 export class TraversalState {

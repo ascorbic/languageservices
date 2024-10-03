@@ -1,6 +1,6 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {Kind} from "@actions/expressions/data/expressiondata";
-import {WorkflowContext} from "../context/workflow-context";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {ContextProviderConfig} from "./config.js";
 import {getDescription, RootContext} from "./descriptions.js";
 import {getEnvContext} from "./env.js";

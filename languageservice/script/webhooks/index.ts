@@ -10,7 +10,7 @@ const OBJECTS_PATH = "./src/context-providers/events/objects.json";
 
 const rawWebhooks = Object.values(schema.webhooks || schema["x-webhooks"]) as any[];
 if (!rawWebhooks) {
-  throw new Error("No webhooks found in schema");
+  throw new Error("No webhooks found in schema/index.js");
 }
 
 const webhooks: Webhook[] = [];

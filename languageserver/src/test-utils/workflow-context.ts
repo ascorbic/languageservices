@@ -1,6 +1,6 @@
-import {WorkflowContext} from "@actions/languageservice/context/workflow-context";
+import {WorkflowContext} from "@actions/languageservice/context/workflow-context.js";
 import {convertWorkflowTemplate, NoOperationTraceWriter, parseWorkflow} from "@actions/workflow-parser";
-import {isJob} from "@actions/workflow-parser/model/type-guards";
+import {isJob} from "@actions/workflow-parser/model/type-guards.js";
 
 export async function createWorkflowContext(
   workflow: string,

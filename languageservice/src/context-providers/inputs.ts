@@ -1,6 +1,6 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
-import {InputConfig} from "@actions/workflow-parser/model/workflow-template";
-import {WorkflowContext} from "../context/workflow-context";
+import {InputConfig} from "@actions/workflow-parser/model/workflow-template.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 
 export function getInputsContext(workflowContext: WorkflowContext): DescriptionDictionary {
   const d = new DescriptionDictionary();

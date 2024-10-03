@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {data, DescriptionDictionary} from "@actions/expressions";
-import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types";
+import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types.js";
 import {complete, getExpressionInput} from "./complete.js";
 import {ContextProviderConfig} from "./context-providers/config";
 import {registerLogger} from "./log.js";
@@ -404,7 +404,7 @@ jobs:
 `;
     const result = await complete(...getPositionFromCursor(input), {contextProviderConfig});
 
-    expect(result.map(x => x.label)).toEqual(["GITHUB_TOKEN"]);
+    expect(result.map(x => x.label)).toEqual(["GITHUB_token.js"]);
   });
 
   it("needs context only includes referenced jobs", async () => {
@@ -562,7 +562,7 @@ jobs:
 `;
 
     const result = await complete(...getPositionFromCursor(input), {contextProviderConfig});
-    expect(result.map(x => x.label)).toEqual(["GITHUB_TOKEN", "secret1", "secret2"]);
+    expect(result.map(x => x.label)).toEqual(["GITHUB_token.js", "secret1", "secret2"]);
   });
 
   describe("github context", () => {
@@ -917,7 +917,7 @@ jobs:
 
       const result = await complete(...getPositionFromCursor(input), {contextProviderConfig});
 
-      expect(result.map(x => x.label)).toEqual(["fail-fast", "job-index", "job-total", "max-parallel"]);
+      expect(result.map(x => x.label)).toEqual(["fail-fast", "job-index.js", "job-total", "max-parallel"]);
     });
   });
 

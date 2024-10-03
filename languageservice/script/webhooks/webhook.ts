@@ -16,7 +16,7 @@ export default class Webhook {
     this.description = webhook.description;
     this.summary = webhook.summary;
     this.bodyParameters = [];
-    this.availability = webhook["x-github"]["supported-webhook-types"];
+    this.availability = webhook["x-github"]["supported-webhook-types.js"];
 
     // for some webhook action types (like some pull-request webhook types) the
     // schema properties are under a oneOf so we try and take the action from

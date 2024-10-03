@@ -1,4 +1,4 @@
-import {CompletionItem, MarkupContent} from "vscode-languageserver-types";
+import {CompletionItem, MarkupContent} from "vscode-languageserver-types.js";
 import {complete} from "./complete.js";
 import {getPositionFromCursor} from "./test-utils/cursor-position";
 import {testFileProvider} from "./test-utils/test-file-provider";

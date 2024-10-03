@@ -1,4 +1,4 @@
-import {TemplateToken} from "./tokens.js";
+import {TemplateToken} from "./tokens/index.js";
 
 export class ParseEvent {
   public readonly type: EventType;

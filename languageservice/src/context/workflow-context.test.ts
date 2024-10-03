@@ -1,5 +1,5 @@
-import {ActionStep, RunStep} from "@actions/workflow-parser/model/workflow-template";
-import {testGetWorkflowContext} from "../test-utils/test-workflow-context";
+import {ActionStep, RunStep} from "@actions/workflow-parser/model/workflow-template.js";
+import {testGetWorkflowContext} from "../test-utils/test-workflow-context.js";
 
 describe("getWorkflowContext", () => {
   it("context for workflow", async () => {

@@ -1,6 +1,6 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
-import {Step} from "@actions/workflow-parser/model/workflow-template";
-import {WorkflowContext} from "../context/workflow-context";
+import {Step} from "@actions/workflow-parser/model/workflow-template.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {getDescription} from "./descriptions.js";
 
 export function getStepsContext(workflowContext: WorkflowContext): DescriptionDictionary {

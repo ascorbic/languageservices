@@ -1,10 +1,10 @@
 import {FunctionInfo} from "@actions/expressions/funcs/info";
 
-import {TemplateSchema} from "./schema/template-schema";
-import {TemplateValidationError} from "./template-validation-error";
-import {TemplateToken} from "./tokens.js";
-import {TokenRange} from "./tokens/token-range";
-import {TraceWriter} from "./trace-writer";
+import {TemplateSchema} from "./schema/template-schema.js";
+import {TemplateValidationError} from "./template-validation-error.js";
+import {TemplateToken} from "./tokens/index.js";
+import {TokenRange} from "./tokens/token-range.js";
+import {TraceWriter} from "./trace-writer.js";
 /**
  * Context object that is flowed through while loading and evaluating object templates
  */
@@ -44,7 +44,7 @@ export class TemplateContext {
     err: string | Error | unknown,
     tokenRange?: TokenRange
   ): void {
-    const token = tokenOrFileId as TemplateToken | undefined;
+    const token = tokenOrFileId as TemplateToken;
     const range = tokenRange || token?.range;
     const prefix = this.getErrorPrefix(token?.file ?? (tokenOrFileId as number | undefined), token?.line, token?.col);
     const message = (err as Error | undefined)?.message ?? String(err);

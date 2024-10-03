@@ -3,27 +3,27 @@ import {FunctionDefinition, FunctionInfo} from "@actions/expressions/funcs/info"
 import {Lexer} from "@actions/expressions/lexer";
 import {ErrorPolicy} from "@actions/workflow-parser/model/convert";
 import {getCronDescription} from "@actions/workflow-parser/model/converter/cron";
-import {splitAllowedContext} from "@actions/workflow-parser/templates/allowed-context";
-import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {isBasicExpression, isString} from "@actions/workflow-parser/templates/tokens/type-guards";
+import {splitAllowedContext} from "@actions/workflow-parser/templates/allowed-context.js";
+import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {isBasicExpression, isString} from "@actions/workflow-parser/templates/tokens/type-guards.js";
 import {File} from "@actions/workflow-parser/workflows/file";
 import {FileProvider} from "@actions/workflow-parser/workflows/file-provider";
 import {Position, TextDocument} from "vscode-languageserver-textdocument";
-import {Hover} from "vscode-languageserver-types";
+import {Hover} from "vscode-languageserver-types.js";
 import {ContextProviderConfig} from "./context-providers/config";
 import {getContext, Mode} from "./context-providers/default";
 import {getFunctionDescription} from "./context-providers/descriptions";
-import {getWorkflowContext, WorkflowContext} from "./context/workflow-context";
+import {getWorkflowContext, WorkflowContext} from "./context/workflow-context.js";
 import {
   getReusableWorkflowInputDescription,
   isReusableWorkflowJobInput
-} from "./description-providers/reusable-job-inputs";
+} from "./description-providers/reusable-job-inputs.js";
 import {ExpressionPos, mapToExpressionPos} from "./expression-hover/expression-pos";
 import {HoverVisitor} from "./expression-hover/visitor";
 import {info} from "./log.js";
 import {isPotentiallyExpression} from "./utils/expression-detection";
-import {findToken, TokenResult} from "./utils/find-token";
+import {findToken, TokenResult} from "./utils/find-token.js";
 import {mapRange} from "./utils/range";
 import {fetchOrConvertWorkflowTemplate, fetchOrParseWorkflow} from "./utils/workflow-cache";
 

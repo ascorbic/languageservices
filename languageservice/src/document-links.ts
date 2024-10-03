@@ -1,9 +1,9 @@
 import {ErrorPolicy} from "@actions/workflow-parser/model/convert";
-import {isJob, isReusableWorkflowJob} from "@actions/workflow-parser/model/type-guards";
+import {isJob, isReusableWorkflowJob} from "@actions/workflow-parser/model/type-guards.js";
 import {File} from "@actions/workflow-parser/workflows/file";
 import {parseFileReference} from "@actions/workflow-parser/workflows/file-reference";
 import {TextDocument} from "vscode-languageserver-textdocument";
-import {DocumentLink} from "vscode-languageserver-types";
+import {DocumentLink} from "vscode-languageserver-types.js";
 import * as vscodeURI from "vscode-uri";
 import {actionUrl, parseActionReference} from "./action.js";
 import {mapRange} from "./utils/range";

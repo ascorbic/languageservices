@@ -1,4 +1,4 @@
-import {WorkflowContext} from "../context/workflow-context";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {Value} from "./config.js";
 
 export function needs(context: WorkflowContext): Value[] {

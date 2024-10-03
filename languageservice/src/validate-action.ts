@@ -1,9 +1,9 @@
 import {isMapping} from "@actions/workflow-parser";
-import {isActionStep} from "@actions/workflow-parser/model/type-guards";
-import {Step} from "@actions/workflow-parser/model/workflow-template";
-import {ScalarToken} from "@actions/workflow-parser/templates/tokens/scalar-token";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {Diagnostic, DiagnosticSeverity} from "vscode-languageserver-types";
+import {isActionStep} from "@actions/workflow-parser/model/type-guards.js";
+import {Step} from "@actions/workflow-parser/model/workflow-template.js";
+import {ScalarToken} from "@actions/workflow-parser/templates/tokens/scalar-token.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {Diagnostic, DiagnosticSeverity} from "vscode-languageserver-types.js";
 import {parseActionReference} from "./action.js";
 import {mapRange} from "./utils/range";
 import {ValidationConfig} from "./validate.js";

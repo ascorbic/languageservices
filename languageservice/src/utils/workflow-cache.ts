@@ -1,7 +1,7 @@
 import {convertWorkflowTemplate, parseWorkflow, ParseWorkflowResult, WorkflowTemplate} from "@actions/workflow-parser";
 import {WorkflowTemplateConverterOptions} from "@actions/workflow-parser/model/convert";
-import {TemplateContext} from "@actions/workflow-parser/templates/template-context";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
+import {TemplateContext} from "@actions/workflow-parser/templates/template-context.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
 import {File} from "@actions/workflow-parser/workflows/file";
 
 import {CompletionConfig} from "../complete";

@@ -1,8 +1,7 @@
 import {isCollection, isDocument, isMap, isPair, isScalar, isSeq, LineCounter, parseDocument, Scalar} from "yaml";
-import type {LinePos} from "yaml/dist/errors";
-import type {NodeBase} from "yaml/dist/nodes/Node";
-import {ObjectReader} from "../templates/object-reader";
-import {EventType, ParseEvent} from "../templates/parse-event";
+import type {YAMLError, Node} from "yaml";
+import {ObjectReader} from "../templates/object-reader.js";
+import {EventType, ParseEvent} from "../templates/parse-event.js";
 import {
   BooleanToken,
   LiteralToken,
@@ -11,8 +10,8 @@ import {
   NumberToken,
   SequenceToken,
   StringToken
-} from "../templates/tokens/index";
-import {Position, TokenRange} from "../templates/tokens/token-range";
+} from "../templates/tokens/index.js";
+import {Position, TokenRange} from "../templates/tokens/token-range.js";
 
 export type YamlError = {
   message: string;
@@ -41,7 +40,7 @@ export class YamlObjectReader implements ObjectReader {
   }
 
   private *getNodes(node: unknown): Generator<ParseEvent, void> {
-    let range = this.getRange(node as NodeBase | undefined);
+    let range = this.getRange(node as Node | undefined);
 
     if (isDocument(node)) {
       yield new ParseEvent(EventType.DocumentStart);
@@ -85,7 +84,7 @@ export class YamlObjectReader implements ObjectReader {
     }
   }
 
-  private getRange(node: NodeBase | undefined): TokenRange | undefined {
+  private getRange(node: Node | undefined): TokenRange | undefined {
     const range = node?.range ?? [];
     const startPos = range[0];
     const endPos = range[1];
@@ -217,7 +216,7 @@ export class YamlObjectReader implements ObjectReader {
   }
 }
 
-function rangeFromLinePos(linePos: [LinePos] | [LinePos, LinePos] | undefined): TokenRange | undefined {
+function rangeFromLinePos(linePos: YAMLError["linePos"]): TokenRange | undefined {
   if (linePos === undefined) {
     return;
   }

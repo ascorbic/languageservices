@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import {StringToken} from "./templates/tokens";
-import {isBasicExpression, isString} from "./templates/tokens/type-guards";
+import {StringToken} from "./templates/tokens/index.js";
+import {isBasicExpression, isString} from "./templates/tokens/type-guards.js";
 import {nullTrace} from "./test-utils/null-trace";
 import {parseWorkflow} from "./workflows/workflow-parser";
 
@@ -173,7 +173,7 @@ jobs:
     ]);
   });
 
-  it("parses isExpression strings into expression tokens", () => {
+  it("parses isExpression strings into expression tokens/index.js", () => {
     const result = parseWorkflow(
       {
         name: "test.yaml",

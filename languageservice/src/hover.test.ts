@@ -9,7 +9,7 @@ export function testHoverConfig(tokenValue: string, tokenKey: string, descriptio
     descriptionProvider: {
       getDescription: (_, token) => {
         if (!isString(token)) {
-          throw new Error("Test provider only supports string tokens");
+          throw new Error("Test provider only supports string tokens/index.js");
         }
 
         expect(token.value).toEqual(tokenValue);

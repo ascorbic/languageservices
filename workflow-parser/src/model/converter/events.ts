@@ -1,9 +1,9 @@
-import {TemplateContext} from "../../templates/template-context";
-import {MappingToken} from "../../templates/tokens/mapping-token";
-import {SequenceToken} from "../../templates/tokens/sequence-token";
-import {TemplateToken} from "../../templates/tokens/template-token";
-import {isLiteral, isMapping, isSequence, isString} from "../../templates/tokens/type-guards";
-import {TokenType} from "../../templates/tokens/types";
+import {TemplateContext} from "../../templates/template-context.js";
+import {MappingToken} from "../../templates/tokens/mapping-token.js";
+import {SequenceToken} from "../../templates/tokens/sequence-token.js";
+import {TemplateToken} from "../../templates/tokens/template-token.js";
+import {isLiteral, isMapping, isSequence, isString} from "../../templates/tokens/type-guards.js";
+import {TokenType} from "../../templates/tokens/types.js";
 import {
   BranchFilterConfig,
   EventsConfig,
@@ -12,11 +12,11 @@ import {
   TagFilterConfig,
   TypesFilterConfig,
   WorkflowFilterConfig
-} from "../workflow-template";
+} from "../workflow-template.js";
 import {isValidCron} from "./cron.js";
-import {convertStringList} from "./string-list";
-import {convertEventWorkflowCall} from "./workflow-call";
-import {convertEventWorkflowDispatchInputs} from "./workflow-dispatch";
+import {convertStringList} from "./string-list.js";
+import {convertEventWorkflowCall} from "./workflow-call.js";
+import {convertEventWorkflowDispatchInputs} from "./workflow-dispatch.js";
 
 export function convertOn(context: TemplateContext, token: TemplateToken): EventsConfig {
   if (isLiteral(token)) {
@@ -75,7 +75,7 @@ export function convertOn(context: TemplateContext, token: TemplateToken): Event
         ...convertPatternFilter("branches", eventToken),
         ...convertPatternFilter("tags", eventToken),
         ...convertPatternFilter("paths", eventToken),
-        ...convertFilter("types", eventToken),
+        ...convertFilter("types.js", eventToken),
         ...convertFilter("workflows", eventToken)
       };
     }
@@ -87,10 +87,12 @@ export function convertOn(context: TemplateContext, token: TemplateToken): Event
   return {};
 }
 
-function convertPatternFilter<T extends BranchFilterConfig & TagFilterConfig & PathFilterConfig>(
+type AnyConfig = BranchFilterConfig & TagFilterConfig & PathFilterConfig;
+
+function convertPatternFilter<T extends AnyConfig = AnyConfig>(
   name: "branches" | "tags" | "paths",
   token: MappingToken
-): T {
+): AnyConfig {
   const result = {} as T;
 
   for (const item of token) {
@@ -121,10 +123,10 @@ function convertPatternFilter<T extends BranchFilterConfig & TagFilterConfig & P
   return result;
 }
 
-function convertFilter<T extends TypesFilterConfig & WorkflowFilterConfig>(
-  name: "types" | "workflows",
+function convertFilter<T extends TypesFilterConfig & WorkflowFilterConfig = TypesFilterConfig & WorkflowFilterConfig>(
+  name: "types.js" | "workflows",
   token: MappingToken
-): T {
+): TypesFilterConfig & WorkflowFilterConfig {
   const result = {} as T;
 
   for (const item of token) {

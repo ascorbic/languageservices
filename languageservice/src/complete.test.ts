@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import {MarkupContent, TextEdit} from "vscode-languageserver-types";
+import {MarkupContent, TextEdit} from "vscode-languageserver-types.js";
 import {complete} from "./complete.js";
 import {registerLogger} from "./log.js";
 import {getPositionFromCursor} from "./test-utils/cursor-position";
@@ -377,7 +377,7 @@ o|
     );
   });
 
-  it("sets range when completing token", async () => {
+  it("sets range when completing token.js", async () => {
     const input = `on: push
 jobs:
   pre-build:
@@ -507,7 +507,7 @@ jobs:
 
     const result = await complete(...getPositionFromCursor(input));
 
-    expect(result.filter(x => x.label === "types").map(x => x.textEdit?.newText)).toEqual(["types: "]);
+    expect(result.filter(x => x.label === "types.js").map(x => x.textEdit?.newText)).toEqual(["types: "]);
   });
 
   it("does not add : for one-of in key mode", async () => {
@@ -515,6 +515,6 @@ jobs:
 
     const result = await complete(...getPositionFromCursor(input));
 
-    expect(result.filter(x => x.label === "types").map(x => x.textEdit?.newText)).toEqual(["types"]);
+    expect(result.filter(x => x.label === "types.js").map(x => x.textEdit?.newText)).toEqual(["types.js"]);
   });
 });

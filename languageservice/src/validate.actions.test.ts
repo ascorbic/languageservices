@@ -1,4 +1,4 @@
-import {DiagnosticSeverity} from "vscode-languageserver-types";
+import {DiagnosticSeverity} from "vscode-languageserver-types.js";
 import {ActionMetadata, ActionReference} from "./action.js";
 import {registerLogger} from "./log.js";
 import {createDocument} from "./test-utils/document";

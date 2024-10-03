@@ -1,6 +1,6 @@
-import {LiteralToken, TemplateToken} from ".";
-import {DefinitionInfo} from "../schema/definition-info";
-import {TokenRange} from "./token-range";
+import {LiteralToken, TemplateToken} from "./index.js";
+import {DefinitionInfo} from "../schema/definition-info.js";
+import {TokenRange} from "./token-range.js";
 import {TokenType} from "./types.js";
 
 export class NullToken extends LiteralToken {

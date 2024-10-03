@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {data, DescriptionDictionary} from "@actions/expressions";
-import {Job} from "@actions/workflow-parser/model/workflow-template";
-import {BasicExpressionToken} from "@actions/workflow-parser/templates/tokens/basic-expression-token";
-import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token";
-import {SequenceToken} from "@actions/workflow-parser/templates/tokens/sequence-token";
-import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {WorkflowContext} from "../context/workflow-context";
+import {Job} from "@actions/workflow-parser/model/workflow-template.js";
+import {BasicExpressionToken} from "@actions/workflow-parser/templates/tokens/basic-expression-token.js";
+import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token.js";
+import {SequenceToken} from "@actions/workflow-parser/templates/tokens/sequence-token.js";
+import {StringToken} from "@actions/workflow-parser/templates/tokens/string-token.js";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {Mode} from "./default.js";
 import {getMatrixContext} from "./matrix.js";
 
@@ -76,7 +76,7 @@ describe("matrix context", () => {
       expect(context).toEqual(new DescriptionDictionary());
     });
 
-    it("strategy is not a mapping token", () => {
+    it("strategy is not a mapping token.js", () => {
       const workflowContext = contextFromStrategy(stringToToken("hello"));
       expect(workflowContext.job!.strategy).toBeDefined();
 
@@ -92,7 +92,7 @@ describe("matrix context", () => {
       expect(context).toEqual(new data.Null());
     });
 
-    it("matrix is not a mapping token", () => {
+    it("matrix is not a mapping token.js", () => {
       const strategy = new MappingToken(undefined, undefined, undefined);
       strategy.add(stringToToken("matrix"), stringToToken("hello"));
       const workflowContext = contextFromStrategy(strategy);

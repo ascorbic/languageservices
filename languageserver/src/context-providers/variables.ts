@@ -1,7 +1,7 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {Pair} from "@actions/expressions/data/expressiondata";
-import {StringData} from "@actions/expressions/data/index";
-import {WorkflowContext} from "@actions/languageservice/context/workflow-context";
+import {StringData} from "@actions/expressions/data/index.js";
+import {WorkflowContext} from "@actions/languageservice/context/workflow-context.js";
 import {log, warn} from "@actions/languageservice/log";
 import {isMapping, isString} from "@actions/workflow-parser";
 import {Octokit} from "@octokit/rest";

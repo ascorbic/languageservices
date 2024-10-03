@@ -1,11 +1,11 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {isMapping, isScalar, isString} from "@actions/workflow-parser";
-import {WorkflowContext} from "../context/workflow-context";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {scalarToData} from "../utils/scalar-to-data";
 
 export function getStrategyContext(workflowContext: WorkflowContext): DescriptionDictionary {
   // https://docs.github.com/en/actions/learn-github-actions/contexts#strategy-context
-  const keys = ["fail-fast", "job-index", "job-total", "max-parallel"];
+  const keys = ["fail-fast", "job-index.js", "job-total", "max-parallel"];
 
   const strategy = workflowContext.job?.strategy ?? workflowContext.reusableWorkflowJob?.strategy;
   if (!strategy || !isMapping(strategy)) {

@@ -1,7 +1,7 @@
 import {ValueProviderConfig, ValueProviderKind} from "./config.js";
 import {needs} from "./needs.js";
-import {reusableJobInputs} from "./reusable-job-inputs";
-import {reusableJobSecrets} from "./reusable-job-secrets";
+import {reusableJobInputs} from "./reusable-job-inputs.js";
+import {reusableJobSecrets} from "./reusable-job-secrets.js";
 import {stringsToValues} from "./strings-to-values";
 
 export const DEFAULT_RUNNER_LABELS = [

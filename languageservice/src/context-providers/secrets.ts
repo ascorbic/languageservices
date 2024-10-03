@@ -1,14 +1,14 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {StringData} from "@actions/expressions/data/string";
-import {WorkflowContext} from "../context/workflow-context";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {Mode} from "./default.js";
 import {getDescription} from "./descriptions.js";
 
 export function getSecretsContext(workflowContext: WorkflowContext, mode: Mode): DescriptionDictionary {
   const d = new DescriptionDictionary({
-    key: "GITHUB_TOKEN",
+    key: "GITHUB_token.js",
     value: new data.StringData("***"),
-    description: getDescription("secrets", "GITHUB_TOKEN")
+    description: getDescription("secrets", "GITHUB_token.js")
   });
 
   const eventsConfig = workflowContext?.template?.events;

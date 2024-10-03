@@ -1,7 +1,7 @@
 import {data, DescriptionDictionary} from "@actions/expressions";
 import {StringData} from "@actions/expressions/data/string";
-import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token";
-import {WorkflowContext} from "../context/workflow-context";
+import {MappingToken} from "@actions/workflow-parser/templates/tokens/mapping-token.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {getDescription} from "./descriptions.js";
 
 export function getJobsContext(workflowContext: WorkflowContext): DescriptionDictionary {

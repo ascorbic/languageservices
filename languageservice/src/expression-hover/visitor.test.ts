@@ -4,7 +4,7 @@ import {ErrorPolicy} from "@actions/workflow-parser/model/convert";
 import {File} from "@actions/workflow-parser/workflows/file";
 import {ContextProviderConfig} from "../context-providers/config";
 import {getContext, Mode} from "../context-providers/default";
-import {getWorkflowContext} from "../context/workflow-context";
+import {getWorkflowContext} from "../context/workflow-context.js";
 import {validatorFunctions} from "../expression-validation/functions";
 import {nullTrace} from "../nulltrace";
 import {getPositionFromCursor} from "../test-utils/cursor-position";

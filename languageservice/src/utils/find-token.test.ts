@@ -1,9 +1,9 @@
 import {isScalar, parseWorkflow} from "@actions/workflow-parser";
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {TokenType} from "@actions/workflow-parser/templates/tokens/types";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {TokenType} from "@actions/workflow-parser/templates/tokens/types.js";
 import {nullTrace} from "../nulltrace";
 import {getPositionFromCursor} from "../test-utils/cursor-position";
-import {findToken} from "./find-token";
+import {findToken} from "./find-token.js";
 
 type testTokenInfo = [definitionKey: string | null, tokenType: TokenType, literalValue?: string];
 
@@ -44,7 +44,7 @@ function testFindToken(input: string): {
   };
 }
 
-describe("find-token", () => {
+describe("find-token.js", () => {
   it("on string key", () => {
     expect(testFindToken(`o|n: push`)).toEqual({
       path: [["workflow-root-strict", TokenType.Mapping]],

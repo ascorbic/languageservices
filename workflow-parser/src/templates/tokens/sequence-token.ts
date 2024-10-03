@@ -1,7 +1,7 @@
-import {TemplateToken} from ".";
-import {DefinitionInfo} from "../schema/definition-info";
+import {TemplateToken} from "./index.js";
+import {DefinitionInfo} from "../schema/definition-info.js";
 import {SerializedSequenceToken} from "./serialization.js";
-import {TokenRange} from "./token-range";
+import {TokenRange} from "./token-range.js";
 import {TokenType} from "./types.js";
 
 export class SequenceToken extends TemplateToken {

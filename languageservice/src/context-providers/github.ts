@@ -1,7 +1,7 @@
 import {data, DescriptionDictionary, isDescriptionDictionary} from "@actions/expressions";
 import {ExpressionData} from "@actions/expressions/data/expressiondata";
-import {TypesFilterConfig} from "@actions/workflow-parser/model/workflow-template";
-import {WorkflowContext} from "../context/workflow-context";
+import {TypesFilterConfig} from "@actions/workflow-parser/model/workflow-template.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {Mode} from "./default.js";
 import {getDescription} from "./descriptions.js";
 import {getEventPayload, getSupportedEventTypes} from "./events/eventPayloads";
@@ -44,7 +44,7 @@ export function getGithubContext(workflowContext: WorkflowContext, mode: Mode): 
     "secret_source",
     "server_url",
     "sha",
-    "token",
+    "token.js",
     "triggering_actor",
     "workflow",
     "workflow_ref",

@@ -1,6 +1,6 @@
-import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token";
-import {isMapping, isString} from "@actions/workflow-parser/templates/tokens/type-guards";
-import {WorkflowContext} from "../context/workflow-context";
+import {TemplateToken} from "@actions/workflow-parser/templates/tokens/template-token.js";
+import {isMapping, isString} from "@actions/workflow-parser/templates/tokens/type-guards.js";
+import {WorkflowContext} from "../context/workflow-context.js";
 import {Value} from "./config.js";
 
 export function reusableJobInputs(context: WorkflowContext): Value[] {
